@@ -1,0 +1,114 @@
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 1.4rem 1rem 2rem;
+  background: #5e646a;
+  color: #1b1e22;
+  font-family: Barlow, "Segoe UI", sans-serif;
+}
+
+.panel {
+  width: min(980px, 100%);
+  background: linear-gradient(180deg, #eceeef, #c8ccd0);
+  border-radius: 18px;
+  padding: 1rem 1rem 0.8rem;
+  box-shadow:
+    0 22px 40px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 #fff;
+}
+
+.panel-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: end;
+  flex-wrap: wrap;
+}
+
+.kicker {
+  margin: 0;
+  font-family: "Share Tech Mono", monospace;
+  letter-spacing: 0.18em;
+  font-size: 0.75rem;
+  color: #5c5348;
+}
+
+.panel-top strong { font-size: 1.4rem; }
+
+.tabs { display: flex; gap: 0.35rem; flex-wrap: wrap; }
+
+.tabs button {
+  margin: 0;
+  background: #2c3136;
+  color: #f4f1ea;
+  border: 0;
+  border-radius: 6px;
+  padding: 0.45rem 0.7rem;
+}
+
+.tabs button.on { background: #e39b12; color: #1a1408; font-weight: 600; }
+
+.note { color: #3e444a; font-size: 0.92rem; }
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.55rem;
+  margin-top: 0.4rem;
+}
+
+.stat {
+  background: #1a140c;
+  color: #ffb000;
+  font-family: "Share Tech Mono", monospace;
+  border-radius: 6px;
+  padding: 0.7rem 0.75rem;
+}
+
+.stat span { display: block; color: #a8843d; font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; }
+
+.stat b { display: block; font-size: 2.1rem; font-weight: 400; }
+
+.card {
+  background: #f7f8f8;
+  border-radius: 8px;
+  padding: 0.9rem 1rem 1rem;
+  margin-top: 0.7rem;
+}
+
+h2 { margin: 0 0 0.4rem; font-size: 1rem; }
+
+button, .btn {
+  margin-top: 0.75rem;
+  background: #2c3136;
+  color: #f7f8f8;
+  border: 0;
+  border-radius: 6px;
+  padding: 0.5rem 0.75rem;
+}
+
+button.ghost, button.small {
+  background: transparent;
+  color: #1b1e22;
+  border: 1px solid #8d949a;
+}
+
+button.small { margin: 0; padding: 0.2rem 0.4rem; }
+
+input, select, textarea {
+  background: white;
+  border: 1px solid #b7bec4;
+  border-radius: 4px;
+  color: #1b1e22;
+}
+
+th, td { border-bottom: 1px solid #e1e4e6; }
+
+.links { display: flex; gap: 1rem; font-size: 0.88rem; }
+
+.links a { color: #2c3136; }
+
+@media (max-width: 700px) {
+  .stats { grid-template-columns: 1fr; }
+}

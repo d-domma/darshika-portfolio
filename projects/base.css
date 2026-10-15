@@ -1,0 +1,52 @@
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body { margin: 0; }
+
+button, input, select, textarea { font: inherit; color: inherit; }
+
+button { cursor: pointer; }
+
+button:disabled { opacity: 0.4; cursor: default; }
+
+label { display: block; margin-top: 0.75rem; }
+
+input, select, textarea {
+  width: 100%;
+  margin-top: 0.3rem;
+  padding: 0.5rem 0.55rem;
+}
+
+textarea { min-height: 6rem; resize: vertical; }
+
+table { width: 100%; border-collapse: collapse; }
+
+th, td { text-align: left; padding: 0.45rem 0.3rem; vertical-align: top; }
+
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 0.7rem 1rem; }
+
+.row { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: end; }
+
+.row input, .row select, .row textarea { width: auto; flex: 1; min-width: 8rem; margin-top: 0; }
+
+.row button { margin-top: 0; }
+
+.actions { display: flex; flex-wrap: wrap; gap: 0.45rem; }
+
+canvas.block, .maps canvas { width: 100%; height: auto; }
+
+.maps { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 0.6rem; }
+
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+@media (max-width: 700px) {
+  .grid-2 { grid-template-columns: 1fr; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}

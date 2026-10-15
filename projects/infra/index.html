@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Eco Infra Studio</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%96%A3%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="studio.css">
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg px-3 px-md-4 py-3">
+    <div class="container-xl">
+      <a class="navbar-brand nav-brand" href="#/">Eco Infra Studio</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Open menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="nav">
+        <div class="navbar-nav ms-auto gap-lg-3">
+          <a class="nav-link" href="#/">Overview</a>
+          <a class="nav-link" href="#/design">Design a site</a>
+          <a class="nav-link" href="../../index.html">Portfolio</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div id="home">
+    <section class="hero py-5">
+      <div class="container-xl py-4">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-7">
+            <p class="text-uppercase small fw-semibold mb-2" style="letter-spacing:.14em;color:var(--leaf)">Environmental design · code · Blender</p>
+            <h1 class="display-4 mb-3">Design infrastructure that fits the site, the climate, and the code.</h1>
+            <p class="fs-5 mb-4" style="max-width:40rem;color:#3d4a38">Enter a place and your preferences. The studio cross-checks open environmental data and model building rules, then builds a detailed 3D massing in Blender — ready to edit or 3D print.</p>
+            <a href="#/design" class="btn btn-moss btn-lg px-4 rounded-pill">Start a design</a>
+          </div>
+          <div class="col-lg-5">
+            <div class="card-quiet p-4">
+              <h2 class="h4 mb-3">What the pipeline does</h2>
+              <ol class="mb-0 ps-3">
+                <li class="mb-2">Reads lot size, building type, roof, materials, and sustainability options.</li>
+                <li class="mb-2">Pulls climate, air quality, and nearby green space from open APIs.</li>
+                <li class="mb-2">Checks setbacks, height, coverage, FAR, open space, and stormwater.</li>
+                <li>Generates a Blender scene with landscape, PV, and a printable STL.</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="container-xl py-4 pb-5">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card-quiet h-100 p-4">
+            <div class="small text-uppercase fw-semibold mb-2" style="color:var(--clay)">Python analysis</div>
+            <h3 class="h5">Site + climate intelligence</h3>
+            <p class="mb-0" style="color:#4a5446">Open-Meteo weather and air quality plus OpenStreetMap parks and habitat within 900 meters of the site.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card-quiet h-100 p-4">
+            <div class="small text-uppercase fw-semibold mb-2" style="color:var(--clay)">Legal search</div>
+            <h3 class="h5">Only code-passing variants</h3>
+            <p class="mb-0" style="color:#4a5446">Hundreds of envelopes are tested. Required setbacks, height, coverage, FAR, and stormwater are a hard filter — then the lowest-carbon legal option is sent to Blender.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card-quiet h-100 p-4">
+            <div class="small text-uppercase fw-semibold mb-2" style="color:var(--clay)">NYC stock</div>
+            <h3 class="h5">Scored against real buildings</h3>
+            <p class="mb-0" style="color:#4a5446">PLUTO lots plus LL84 measured energy where it exists. Embodied carbon labels use CLF typical intensities, not a measured LCA for each lot.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div id="design" hidden>
+    <div class="container-xl py-4 py-md-5">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <h1 class="h2 mb-2">Site &amp; preferences</h1>
+          <p class="mb-4" style="color:#4a5446">Three short steps. We overlay that city's building rules, stay inside your budget, then search legal envelopes with a stock-trained energy model and build the 3D in Blender.</p>
+          <div class="d-flex flex-column gap-3" id="steps"></div>
+        </div>
+        <div class="col-lg-8">
+          <form class="card-quiet p-4 p-md-5" id="wizard">
+            <div data-step="0">
+              <h2 class="h4 mb-4">Where is the site?</h2>
+              <div class="mb-3">
+                <label class="form-label" for="address">City, address, or region</label>
+                <input class="form-control form-control-lg" id="address" name="address" value="Portland, Oregon">
+              </div>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label" for="width">Lot width (m)</label>
+                  <input type="number" class="form-control" id="width" name="lot_width_m" value="18">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" for="depth">Lot depth (m)</label>
+                  <input type="number" class="form-control" id="depth" name="lot_depth_m" value="32">
+                </div>
+              </div>
+            </div>
+            <div data-step="1" hidden>
+              <h2 class="h4 mb-4">Building program</h2>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label" for="type">Building type</label>
+                  <select class="form-select" id="type" name="building_type">
+                    <option value="single_family">Single-family house</option>
+                    <option value="duplex">Duplex</option>
+                    <option value="townhouse">Townhouse</option>
+                    <option value="apartment">Apartment building</option>
+                    <option value="mixed_use">Mixed-use</option>
+                    <option value="office">Office / workspace</option>
+                    <option value="community">Community facility</option>
+                  </select>
+                </div>
+                <div class="col-md-3">
+                  <label class="form-label" for="stories">Stories</label>
+                  <input type="number" class="form-control" id="stories" name="stories" min="1" max="12" value="2">
+                </div>
+                <div class="col-md-3">
+                  <label class="form-label" for="units">Units</label>
+                  <input type="number" class="form-control" id="units" name="units" min="1" value="1">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" for="roof">Roof</label>
+                  <select class="form-select" id="roof" name="roof_type">
+                    <option value="pitched">Pitched</option>
+                    <option value="flat">Flat</option>
+                    <option value="green" selected>Green roof</option>
+                    <option value="solar_green">Green roof + solar</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" for="mat">Primary structure</label>
+                  <select class="form-select" id="mat" name="primary_material">
+                    <option value="mass_timber">Mass timber</option>
+                    <option value="rammed_earth">Rammed earth</option>
+                    <option value="brick">Brick</option>
+                    <option value="recycled_steel">Recycled steel</option>
+                    <option value="concrete">Concrete</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" for="bed">Bedrooms (if residential)</label>
+                  <input type="number" class="form-control" id="bed" name="bedrooms" value="3">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" for="park">Parking spaces</label>
+                  <input type="number" class="form-control" id="park" name="parking_spaces" value="1">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" for="budget">Construction budget</label>
+                  <select class="form-select" id="budget" name="budget_tier">
+                    <option value="affordable">Affordable (~$2,600/m² floor cap)</option>
+                    <option value="standard" selected>Standard (~$3,400/m² floor cap)</option>
+                    <option value="premium">Premium (~$4,600/m² floor cap)</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div data-step="2" hidden>
+              <h2 class="h4 mb-4">Sustainability priorities</h2>
+              <label class="form-label" for="gsp">Green-space priority (<span id="gsp-n">4</span> / 5)</label>
+              <input type="range" class="form-range mb-4" min="1" max="5" id="gsp" name="green_space_priority" value="4">
+              <div class="row g-3">
+                <div class="col-md-6"><div class="form-check p-3 rounded-3 check-tile"><input class="form-check-input" type="checkbox" id="solar" name="solar_panels" checked><label class="form-check-label" for="solar">Rooftop solar array</label></div></div>
+                <div class="col-md-6"><div class="form-check p-3 rounded-3 check-tile"><input class="form-check-input" type="checkbox" id="rain" name="rainwater_harvesting" checked><label class="form-check-label" for="rain">Rain garden + cistern</label></div></div>
+                <div class="col-md-6"><div class="form-check p-3 rounded-3 check-tile"><input class="form-check-input" type="checkbox" id="native" name="native_landscaping" checked><label class="form-check-label" for="native">Native landscaping</label></div></div>
+                <div class="col-md-6"><div class="form-check p-3 rounded-3 check-tile"><input class="form-check-input" type="checkbox" id="ev" name="ev_charging" checked><label class="form-check-label" for="ev">EV charging ready</label></div></div>
+              </div>
+              <div class="alert alert-danger mt-4 mb-0" id="error" hidden></div>
+            </div>
+            <div class="d-flex justify-content-between mt-4">
+              <button class="btn btn-outline-secondary rounded-pill px-4" type="button" id="back">Back</button>
+              <button class="btn btn-moss rounded-pill px-4" type="button" id="next">Continue</button>
+              <button class="btn btn-clay rounded-pill px-4" type="submit" id="go" hidden>Analyze &amp; generate 3D</button>
+            </div>
+            <p class="small mt-3 mb-0" id="busy" hidden style="color:#66705f">Fetching climate and green-space data, running code checks, then launching Blender. This can take 20–60 seconds.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="results" class="container-xl py-4 py-md-5" hidden></div>
+
+  <footer class="py-4 mt-5">
+    <div class="container-xl small d-flex flex-wrap justify-content-between gap-2">
+      <span>Sustainable infrastructure design · environmental data · code checks · Blender 3D</span>
+      <span>Models export as .blend, .glb, and 3D-printable .stl</span>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="studio.js"></script>
+</body>
+</html>

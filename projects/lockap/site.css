@@ -1,0 +1,118 @@
+body {
+  margin: 0;
+  background: #f3ecdf;
+  color: #24190f;
+  font-family: Nunito, "Segoe UI", sans-serif;
+}
+
+.band {
+  background: #3c2a78;
+  color: #f7f3ea;
+  padding: 2.4rem 1.25rem 1.3rem;
+}
+
+.band .kicker {
+  margin: 0;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  color: #d7c9ff;
+}
+
+.band h1 {
+  margin: 0.15rem 0 0.3rem;
+  font-family: Fraunces, Palatino, serif;
+  font-weight: 500;
+  font-size: clamp(3.2rem, 8vw, 5.2rem);
+  letter-spacing: -0.04em;
+  line-height: 0.9;
+}
+
+.band p { max-width: 36rem; margin: 0.2rem 0 1rem; }
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  max-width: 760px;
+}
+
+.tabs button {
+  margin: 0;
+  background: transparent;
+  color: #f7f3ea;
+  border: 1px solid rgba(247, 243, 234, 0.35);
+  border-radius: 999px;
+  padding: 0.4rem 0.8rem;
+}
+
+.tabs button.on { background: #f3ecdf; color: #3c2a78; border-color: #f3ecdf; font-weight: 700; }
+
+main { max-width: 760px; margin: 0 auto; padding: 1.2rem 1.1rem 3rem; }
+
+.stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.6rem; }
+
+.stat, .card {
+  background: white;
+  border-radius: 18px;
+  padding: 0.9rem 1rem;
+}
+
+.stat span { display: block; color: #7b6d5e; font-size: 0.78rem; }
+
+.stat b { font-family: Fraunces, serif; font-size: 1.8rem; font-weight: 500; }
+
+.card { margin-top: 0.75rem; }
+
+#clock {
+  margin: 0;
+  font-family: Fraunces, serif;
+  font-weight: 500;
+  font-size: clamp(3.4rem, 10vw, 5rem);
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+
+h2 { margin: 0 0 0.4rem; }
+
+.note { color: #6f6256; }
+
+button, .btn {
+  margin-top: 0.7rem;
+  background: #3c2a78;
+  color: white;
+  border: 0;
+  border-radius: 999px;
+  padding: 0.55rem 0.9rem;
+  font-weight: 700;
+}
+
+button.ghost, button.small {
+  background: transparent;
+  color: #3c2a78;
+  border: 1px solid #d9cfc2;
+}
+
+#choices { display: grid; gap: 0.45rem; }
+
+#choices button { width: 100%; text-align: left; margin: 0; border-radius: 12px; }
+
+input, select, textarea {
+  background: #fffdf8;
+  border: 1px solid #e4d9cb;
+  border-radius: 12px;
+  color: #24190f;
+}
+
+th, td { border-bottom: 1px solid #efe6da; }
+
+.pass { color: #0f7a45; }
+
+.fail { color: #a33b16; }
+
+.links { display: flex; gap: 1rem; }
+.links a { color: #3c2a78; }
+
+@media (max-width: 640px) {
+  .stats { grid-template-columns: 1fr; }
+}

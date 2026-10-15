@@ -1,0 +1,96 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #070b10;
+  color: #d5dee8;
+  font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.55rem 1rem;
+  background: #0d141c;
+  border-bottom: 1px solid #1c2a38;
+}
+
+.toolbar strong {
+  font-family: "IBM Plex Mono", monospace;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+
+.tabs { display: flex; gap: 0.15rem; flex: 1; }
+
+.tabs button {
+  margin: 0;
+  background: transparent;
+  color: #8ea3b8;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  border-radius: 0;
+  padding: 0.55rem 0.7rem;
+}
+
+.tabs button.on { color: #7ee0ff; border-bottom-color: #7ee0ff; }
+
+.links { display: flex; gap: 0.8rem; font-size: 0.85rem; }
+
+.links a { color: #8ea3b8; text-decoration: none; }
+
+.banner {
+  margin: 0;
+  padding: 0.45rem 1rem;
+  background: #10202c;
+  color: #9fd8ea;
+  font-size: 0.85rem;
+}
+
+main { padding: 1rem 1.1rem 3rem; }
+
+.card {
+  background: #0d141c;
+  border: 1px solid #1c2a38;
+  padding: 1rem;
+  margin-top: 0.8rem;
+}
+
+h2 { margin: 0 0 0.45rem; font-size: 1rem; font-weight: 500; color: #7ee0ff; }
+
+.note { color: #8ea3b8; }
+
+canvas.block, .maps canvas {
+  background: #000;
+  border: 1px solid #1c2a38;
+  image-rendering: pixelated;
+  max-width: 480px;
+}
+
+label { color: #9fb0c2; font-size: 0.85rem; }
+
+input, select, textarea {
+  background: #070b10;
+  border: 1px solid #2a3d4e;
+  color: #d5dee8;
+}
+
+button, .btn {
+  margin-top: 0.8rem;
+  background: #123246;
+  color: #d8f6ff;
+  border: 1px solid #2a6d86;
+  padding: 0.5rem 0.75rem;
+}
+
+button.ghost, button.small {
+  background: transparent;
+  color: #9fd8ea;
+}
+
+th, td { border-bottom: 1px solid #1c2a38; }
+
+@media (max-width: 720px) {
+  .toolbar { flex-wrap: wrap; }
+}

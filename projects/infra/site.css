@@ -1,0 +1,112 @@
+body {
+  background: #c5d4e2;
+  color: #102033;
+  font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
+}
+
+.shell {
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr);
+  min-height: 100vh;
+}
+
+aside {
+  background: #16324a;
+  color: #e7eef5;
+  padding: 1.4rem 1.2rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.kicker {
+  margin: 0;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #8eb4d4;
+}
+
+aside strong {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 1.35rem;
+  font-weight: 500;
+}
+
+.note { color: #b7c9d8; font-size: 0.92rem; }
+
+.tabs { display: flex; flex-direction: column; gap: 0.25rem; margin-top: 1.2rem; }
+
+.tabs button {
+  text-align: left;
+  background: transparent;
+  color: #e7eef5;
+  border: 1px solid transparent;
+  padding: 0.55rem 0.6rem;
+}
+
+.tabs button.on { border-color: #8eb4d4; background: #10283c; }
+
+.links { margin-top: auto; display: flex; gap: 0.9rem; font-size: 0.88rem; }
+
+.links a { color: #d5e4f2; }
+
+main {
+  background-color: #d7e6f2;
+  background-image:
+    linear-gradient(rgba(22, 50, 74, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(22, 50, 74, 0.08) 1px, transparent 1px);
+  background-size: 24px 24px;
+  padding: 1.1rem;
+}
+
+#app {
+  display: grid;
+  grid-template-columns: minmax(16rem, 22rem) minmax(0, 1fr);
+  gap: 1rem;
+  align-items: start;
+}
+
+#app > :only-child { grid-column: 1 / -1; }
+
+form.card .grid-2 { grid-template-columns: 1fr; }
+
+.card, form.card {
+  background: rgba(247, 251, 255, 0.94);
+  border: 1px solid #8eabC4;
+  padding: 1rem 1rem 1.15rem;
+}
+
+h2 { margin: 0 0 0.4rem; font-size: 1.15rem; font-weight: 500; }
+
+button, .btn {
+  margin-top: 0.9rem;
+  background: #16324a;
+  color: #f4f8fb;
+  border: 0;
+  padding: 0.55rem 0.75rem;
+}
+
+button.ghost, button.small {
+  background: transparent;
+  color: #16324a;
+  border: 1px solid #16324a;
+}
+
+button.small { margin: 0; padding: 0.2rem 0.45rem; }
+
+label { font-family: "IBM Plex Mono", monospace; font-size: 0.75rem; letter-spacing: 0.04em; text-transform: uppercase; }
+
+input, select, textarea { background: #fff; border: 1px solid #8eabc4; color: #102033; }
+
+th, td { border-bottom: 1px solid #d3e0ea; }
+
+.pass { color: #0f6b45; font-family: "IBM Plex Mono", monospace; }
+
+.fail { color: #a33b16; font-family: "IBM Plex Mono", monospace; }
+
+@media (max-width: 900px) {
+  .shell, #app { grid-template-columns: 1fr; }
+  .links { margin-top: 1.2rem; }
+}
