@@ -3,19 +3,20 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Darshika Domma</title>
-  <meta name="description" content="Darshika Domma. Selected work in infrastructure, devices, safety, finance, medical imaging, and study tools.">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230e0e0c'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='Georgia' font-size='26' fill='%23f3efe6'%3EDD%3C/text%3E%3C/svg%3E">
+  <title>Darshika Domma — Portfolio</title>
+  <meta name="description" content="Portfolio of Darshika Domma: infrastructure design, medical devices, safety software, finance, and machine learning.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect fill='%231b1916' width='32' height='32'/%3E%3Ctext x='6' y='23' fill='%23f4f0e6' font-family='Georgia' font-size='18'%3ED%3C/text%3E%3C/svg%3E">
 </head>
 <body>
   <a class="skip" href="#work">Skip to work</a>
-  <header class="bar" id="bar">
-    <a class="logo" href="#top">Darshika Domma</a>
-    <nav aria-label="Page">
+
+  <header class="site-header">
+    <a class="wordmark" href="#top">Darshika Domma</a>
+    <nav class="site-nav" aria-label="Page">
       <a href="#work">Work</a>
       <a href="#about">About</a>
     </nav>
@@ -23,112 +24,228 @@
 
   <main id="top">
     <section class="hero">
-      <p class="eyebrow">Selected work</p>
-      <h1>Darshika Domma</h1>
-      <p class="lede">Student engineer. I design tools that have to survive a site, a sensor, a ledger, or a person who needs help now.</p>
+      <div class="hero-copy">
+        <p class="kicker">Portfolio · seven builds</p>
+        <h1>Code, devices, and tools that have to work outside a demo.</h1>
+        <p class="lede">I’m Darshika. I build infrastructure software, medical hardware, safety tools, and models — then put the ones that are ready in front of people.</p>
+      </div>
+      <ol class="contents">
+        <li><a href="#infra"><span>01</span> Eco Infra Studio</a></li>
+        <li><a href="#aed"><span>02</span> Automatic AED</a></li>
+        <li><a href="#defense"><span>03</span> Women’s Defense</a></li>
+        <li><a href="#finance"><span>04</span> Finance Tracker</a></li>
+        <li><a href="#colon"><span>05</span> Colon Cancer CNN</a></li>
+        <li><a href="#voc"><span>06</span> VOC Detection</a></li>
+        <li><a href="#lockap"><span>07</span> LockAP</a></li>
+      </ol>
     </section>
 
-    <section class="work" id="work">
-      <div class="work-head">
-        <h2>Work</h2>
-        <div class="filters" role="toolbar" aria-label="Filter work">
-          <button type="button" class="on" data-filter="all" aria-pressed="true">All</button>
-          <button type="button" data-filter="place" aria-pressed="false">Place</button>
-          <button type="button" data-filter="device" aria-pressed="false">Devices</button>
-          <button type="button" data-filter="civic" aria-pressed="false">Civic</button>
-          <button type="button" data-filter="money" aria-pressed="false">Money</button>
-          <button type="button" data-filter="health" aria-pressed="false">Health</button>
-          <button type="button" data-filter="study" aria-pressed="false">Study</button>
+    <section id="work" class="work">
+      <div class="work-bar">
+        <h2>Selected work</h2>
+        <div class="filters" role="group" aria-label="Filter projects">
+          <button type="button" class="is-active" data-filter="all">All</button>
+          <button type="button" data-filter="place">Place</button>
+          <button type="button" data-filter="health">Health</button>
+          <button type="button" data-filter="safety">Safety</button>
+          <button type="button" data-filter="money">Money</button>
+          <button type="button" data-filter="study">Study</button>
         </div>
       </div>
-      <p class="live" id="live" aria-live="polite">7 projects</p>
 
-      <a class="project" href="work/infra.html" data-domain="place">
-        <span class="num">01</span>
-        <span>
-          <span class="domain">Place</span>
-          <strong>Eco Infra Studio</strong>
-          <span class="sum">Place, climate, code, then a Blender massing.</span>
-        </span>
-        <span class="go">Case study</span>
-      </a>
-      <a class="project" href="work/aed.html" data-domain="device">
-        <span class="num">02</span>
-        <span>
-          <span class="domain">Device</span>
-          <strong>Automatic AED</strong>
-          <span class="sum">A console for power, self-test, pads, and analyze.</span>
-        </span>
-        <span class="go">Case study</span>
-      </a>
-      <a class="project" href="work/defense.html" data-domain="civic">
-        <span class="num">03</span>
-        <span>
-          <span class="domain">Civic</span>
-          <strong>Women's Defense</strong>
-          <span class="sum">911, a parent text, a check-in, and two routes.</span>
-        </span>
-        <span class="go">Case study</span>
-      </a>
-      <a class="project" href="work/finance.html" data-domain="money">
-        <span class="num">04</span>
-        <span>
-          <span class="domain">Money</span>
-          <strong>Finance Tracker</strong>
-          <span class="sum">Accounts, budgets, sample markets, and a ledger chat.</span>
-        </span>
-        <span class="go">Case study</span>
-      </a>
-      <a class="project" href="work/colon.html" data-domain="health">
-        <span class="num">05</span>
-        <span>
-          <span class="domain">Health</span>
-          <strong>Colon Cancer CNN</strong>
-          <span class="sum">An image run through convolution, ReLU, and pooling.</span>
-        </span>
-        <span class="go">Case study</span>
-      </a>
-      <a class="project" href="work/voc.html" data-domain="health device">
-        <span class="num">06</span>
-        <span>
-          <span class="domain">Device · Health</span>
-          <strong>VOC Detection</strong>
-          <span class="sum">Seven markers, corrections, and three scores you can read.</span>
-        </span>
-        <span class="go">Case study</span>
-      </a>
-      <a class="project" href="work/lockap.html" data-domain="study">
-        <span class="num">07</span>
-        <span>
-          <span class="domain">Study</span>
-          <strong>LockAP</strong>
-          <span class="sum">A timer, practice, a quiz, and notes that stay put.</span>
-        </span>
-        <span class="go">Case study</span>
-      </a>
+      <article class="case" id="infra" data-domain="place">
+        <div class="case-meta">
+          <p class="num">01</p>
+          <p class="domain">Place</p>
+        </div>
+        <div class="case-body">
+          <h3>Eco Infra Studio</h3>
+          <p class="summary">A design studio that takes a site and a set of preferences, checks them against open environmental data and building-code rules, and generates an editable building.</p>
+          <ul>
+            <li>Wizard for lot, building type, roof, materials, and sustainability choices.</li>
+            <li>Climate, air quality, and nearby parks pulled from Open-Meteo and OpenStreetMap.</li>
+            <li>Setbacks, height, coverage, floor-area ratio, open space, and stormwater checked before anything is modeled.</li>
+            <li>Blender writes a <code>.blend</code>, a web <code>.glb</code>, a preview, and an STL for 3D printing.</li>
+          </ul>
+          <p class="stack"><span>Angular</span><span>FastAPI</span><span>Blender</span><span>Python</span></p>
+          <p><a href="https://github.com/d-domma/eco-infra-studio">GitHub</a></p>
+        </div>
+        <figure class="mark-fig" aria-hidden="true">
+          <svg viewBox="0 0 160 160" fill="none">
+            <rect x="18" y="78" width="36" height="58" stroke="currentColor" stroke-width="1.5"/>
+            <rect x="62" y="46" width="44" height="90" stroke="currentColor" stroke-width="1.5"/>
+            <rect x="114" y="64" width="28" height="72" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M18 78 L36 58 L54 78" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M62 46 L84 22 L106 46" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M8 136 H152" stroke="currentColor" stroke-width="1.5"/>
+            <circle cx="28" cy="28" r="8" stroke="currentColor" stroke-width="1.5"/>
+          </svg>
+          <figcaption>Massing, climate, code</figcaption>
+        </figure>
+      </article>
+
+      <article class="case" id="aed" data-domain="health">
+        <div class="case-meta">
+          <p class="num">02</p>
+          <p class="domain">Health</p>
+        </div>
+        <div class="case-body">
+          <h3>Automatic AED</h3>
+          <p class="summary">An automatic external defibrillator as a physical device, with the code that runs detection and the shock sequence.</p>
+          <ul>
+            <li>Hardware build paired with the control software, so the unit is not a diagram on a slide.</li>
+            <li>The program watches the signal, decides whether a shock is indicated, and steps through the response.</li>
+            <li>Built for a moment when a person nearby has to act quickly and the device has to be unambiguous.</li>
+          </ul>
+          <p class="stack"><span>Device</span><span>Embedded code</span></p>
+        </div>
+        <figure class="mark-fig" aria-hidden="true">
+          <svg viewBox="0 0 160 160" fill="none">
+            <path d="M12 84 H42 L52 84 L62 48 L74 120 L86 64 L96 84 H148" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+            <rect x="48" y="28" width="64" height="28" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M72 36 H88 M80 28 V44" stroke="currentColor" stroke-width="1.5"/>
+          </svg>
+          <figcaption>Sense, decide, shock</figcaption>
+        </figure>
+      </article>
+
+      <article class="case" id="defense" data-domain="safety">
+        <div class="case-meta">
+          <p class="num">03</p>
+          <p class="domain">Safety</p>
+        </div>
+        <div class="case-body">
+          <h3>Women’s Defense</h3>
+          <p class="summary">A safety app for getting help immediately, telling a parent, and choosing a route with the public record in view.</p>
+          <ul>
+            <li>One action places a 911 call.</li>
+            <li>A text goes to a parent at the same time, so someone trusted knows what is happening.</li>
+            <li>Routing prefers safer streets instead of the shortest line on a map.</li>
+            <li>A map layer uses Forsyth County’s publicly published registry. This page does not reprint any name or address from that list.</li>
+          </ul>
+          <p class="stack"><span>Mobile</span><span>Maps</span><span>911</span><span>Messaging</span></p>
+          <p><a href="https://github.com/d-domma/womens-defense">GitHub</a></p>
+        </div>
+        <figure class="mark-fig" aria-hidden="true">
+          <svg viewBox="0 0 160 160" fill="none">
+            <path d="M24 120 C40 90 48 70 70 62 C96 52 110 40 136 28" stroke="currentColor" stroke-width="1.5"/>
+            <circle cx="24" cy="120" r="5" fill="currentColor"/>
+            <circle cx="136" cy="28" r="5" stroke="currentColor" stroke-width="1.5"/>
+            <circle cx="78" cy="96" r="7" stroke="currentColor" stroke-width="1.5"/>
+            <circle cx="104" cy="78" r="7" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M70 62 L92 88" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3 4"/>
+          </svg>
+          <figcaption>Call, text, route</figcaption>
+        </figure>
+      </article>
+
+      <article class="case" id="finance" data-domain="money">
+        <div class="case-meta">
+          <p class="num">04</p>
+          <p class="domain">Money</p>
+        </div>
+        <div class="case-body">
+          <h3>Finance Tracker</h3>
+          <p class="summary">A personal ledger that behaves like an account, then adds a stock board and a chatbot for questions about spending.</p>
+          <ul>
+            <li>Income and expenses with a running balance, search, and weekly or monthly summaries.</li>
+            <li>A stock board for prices and percent change, next to business news.</li>
+            <li>An in-app chatbot for budgeting and spending questions.</li>
+            <li>Sign-in, an organizer for transactions, and reminders so bills do not slip.</li>
+          </ul>
+          <p class="stack"><span>Angular</span><span>TypeScript</span><span>Chat</span></p>
+          <p><a href="https://github.com/d-domma/finance-tracker">GitHub</a></p>
+        </div>
+        <figure class="mark-fig" aria-hidden="true">
+          <svg viewBox="0 0 160 160" fill="none">
+            <path d="M20 40 H140 M20 64 H140 M20 88 H140 M20 112 H140" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M36 124 L58 96 L80 108 L108 68 L132 52" stroke="currentColor" stroke-width="1.5"/>
+            <circle cx="132" cy="52" r="4" fill="currentColor"/>
+          </svg>
+          <figcaption>Ledger and market</figcaption>
+        </figure>
+      </article>
+
+      <article class="case" id="colon" data-domain="health">
+        <div class="case-meta">
+          <p class="num">05</p>
+          <p class="domain">Health</p>
+        </div>
+        <div class="case-body">
+          <h3>Colon Cancer Detection</h3>
+          <p class="summary">Towards Precision Medicine in Colorectal Cancer: convolutional networks that separate eight tissue classes and call a patch benign or malignant.</p>
+          <ul>
+            <li>A custom CNN with 4 convolutional layers, trained for 50 epochs.</li>
+            <li>Compared with MobileNet, VGG16, ResNet50, and EfficientNetB1.</li>
+            <li>Validation rose from 66.83% to 71.71% with augmentation. EfficientNetB1 reached about 87% on the test set.</li>
+          </ul>
+          <p class="stack"><span>Python</span><span>CNN</span><span>Images</span></p>
+          <p><a href="https://github.com/d-domma/colon-cancer-cnn">GitHub</a></p>
+        </div>
+        <figure class="mark-fig" aria-hidden="true">
+          <svg viewBox="0 0 160 160" fill="none">
+            <rect x="22" y="28" width="52" height="52" stroke="currentColor" stroke-width="1.5"/>
+            <rect x="30" y="36" width="14" height="14" stroke="currentColor" stroke-width="1.5"/>
+            <rect x="48" y="36" width="14" height="14" stroke="currentColor" stroke-width="1.5"/>
+            <rect x="30" y="54" width="14" height="14" stroke="currentColor" stroke-width="1.5"/>
+            <rect x="48" y="54" width="14" height="14" fill="currentColor"/>
+            <rect x="86" y="48" width="28" height="28" stroke="currentColor" stroke-width="1.5"/>
+            <rect x="122" y="56" width="16" height="16" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M74 54 H86 M114 62 H122" stroke="currentColor" stroke-width="1.5"/>
+          </svg>
+          <figcaption>Image to prediction</figcaption>
+        </figure>
+      </article>
+
+      <article class="case" id="voc" data-domain="health">
+        <div class="case-meta">
+          <p class="num">06</p>
+          <p class="domain">Health</p>
+        </div>
+        <div class="case-body">
+          <h3>VOC Detection</h3>
+          <p class="summary">NeuroVOC, a science-fair build: a sensor workflow and a classifier for volatile organic compound signatures.</p>
+          <ul>
+            <li>Seven raw biomarkers — hexanal, ethylbenzene, isoprene, acetone, octane, nonanal, and decane — plus ratio features and temperature and humidity corrections.</li>
+            <li>Model trials compared logistic regression, random forest, a CNN on the time series, and XGBoost.</li>
+            <li>The React app covers sign-in, device connection, a timed sample, results, and a local history.</li>
+          </ul>
+          <p class="stack"><span>Python</span><span>XGBoost</span><span>React</span><span>Sensor</span></p>
+          <img class="work-photo" src="voc-device.png" alt="Glioblastoma detection device: the VOC simulation, the sensor board, and the enclosure">
+        </div>
+      </article>
+
+      <article class="case" id="lockap" data-domain="study">
+        <div class="case-meta">
+          <p class="num">07</p>
+          <p class="domain">Study</p>
+        </div>
+        <div class="case-body">
+          <h3>LockAP</h3>
+          <p class="summary"><a href="https://lockap.com/">https://lockap.com/</a></p>
+        </div>
+      </article>
+
+      <p class="empty" hidden>Nothing in this group. Choose All to see every project.</p>
     </section>
 
-    <section class="about" id="about">
-      <div>
-        <p class="eyebrow">About</p>
-        <h2>Built across the stack, then taken off the screen.</h2>
-        <p>I am a high school student working in web apps, Python models, and hardware. The projects here are the ones I want read together: a printable building study, an AED console, a safety route, a personal ledger, two health models, and a study site.</p>
-        <ul class="skills">
-          <li>HTML, CSS, JavaScript</li>
-          <li>Angular and React</li>
-          <li>Python and FastAPI</li>
-          <li>CNNs and XGBoost</li>
-          <li>Blender</li>
-        </ul>
+    <section id="about" class="about">
+      <div class="about-copy">
+        <p class="kicker">About</p>
+        <h2>High school, and already shipping.</h2>
+        <p>I like projects that mix a real constraint with the code: a lot line, a sensor, a person who needs help, a balance that has to add up. The stack I reach for most is Python, JavaScript, HTML and CSS, React, Angular, and machine learning.</p>
       </div>
-      <img src="darshika.jpg" alt="Darshika Domma" width="640" height="800">
+      <figure class="portrait">
+        <img src="darshika.jpg" alt="Darshika Domma" width="640" height="800">
+      </figure>
     </section>
   </main>
 
-  <footer>
-    <span>© 2026 Darshika Domma</span>
-    <span>Case study, then the build.</span>
+  <footer class="site-footer">
+    <p>Darshika Domma</p>
+    <a href="#top">Back to top</a>
   </footer>
-  <script src="main.js"></script>
+
+  <script src="site.js"></script>
 </body>
 </html>

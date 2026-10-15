@@ -17,22 +17,22 @@
   <main>
     <p class="kicker">05 · Health</p>
     <h1>Colon Cancer CNN</h1>
-    <p class="deck">A convolutional pipeline for images, shown layer by layer instead of as a single score.</p>
+    <p class="deck">Towards Precision Medicine in Colorectal Cancer: a convolutional network that reads a tissue patch as benign or malignant.</p>
     <a class="build" href="../projects/colon/index.html">Open the build</a>
     <div class="facts">
       <p><span>Role</span>Model</p>
-      <p><span>Stack</span>Python, CNN, medical images</p>
-      <p><span>This build</span>Grayscale, conv, ReLU, pool</p>
+      <p><span>Stack</span>CNN, histopathology</p>
+      <p><span>This build</span>4-layer CNN, 8 classes</p>
     </div>
     <h2>What it is</h2>
-    <p>The project trains a convolutional network to look at images for signs associated with colon cancer. This build lets you load a picture and watch the first kind of computation: four filters, a ReLU, a pool, then a second layer on the combined maps.</p>
+    <p>The project trains convolutional networks on colorectal histology. A custom network with four convolutional layers, trained for 50 epochs, is compared with MobileNet, VGG16, ResNet50, and EfficientNetB1. Validation accuracy was 66.83%, then 71.71% after augmentation. EfficientNetB1 was the best reported test result, about 87%.</p>
     <h2>What you can do</h2>
     <ul>
-      <li>Upload an image and see it scaled and converted to grayscale.</li>
-      <li>Read a histogram, then the pooled feature maps.</li>
-      <li>Download mean, max, and energy for each map.</li>
+      <li>Open one of the eight tissue classes and get a benign or malignant call.</li>
+      <li>Upload a patch and see the eight class scores.</li>
+      <li>Inspect the first feature maps and the five-model comparison.</li>
     </ul>
-    <p>No class is assigned. This is not a diagnosis.</p>
+    <p>The page runs the custom 4-layer CNN. It is not a diagnosis.</p>
     <nav class="pager" aria-label="Projects">
       <a href="finance.html"><span>Previous</span>Finance Tracker</a>
       <a href="voc.html"><span>Next</span>VOC Detection</a>

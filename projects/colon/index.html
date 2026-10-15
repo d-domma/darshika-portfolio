@@ -3,22 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Colon Cancer CNN</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../base.css">
-  <link rel="stylesheet" href="site.css">
+  <title>Colon cancer CNN</title>
 </head>
 <body>
-  <header class="toolbar">
-    <strong>Viewer</strong>
-    <nav class="tabs" id="tabs" aria-label="Pipeline"></nav>
-    <p class="links"><a href="../../work/colon.html">Case study</a><a href="../../index.html">Portfolio</a></p>
-  </header>
-  <p class="banner">Forward stack only. No class is assigned. This is not a diagnosis.</p>
-  <main id="app"></main>
-  <script src="../ui.js"></script>
+  <h1>Colon cancer CNN</h1>
+  <p>This is a convolutional neural network with 4 convolutional layers. It was trained for 50 epochs to separate 8 colorectal tissue types on the public Kather histology tiles (Zenodo, CC BY 4.0): tumor, stroma, complex stroma, lymphocytes, debris, mucosa, adipose, and empty. The same task was compared on MobileNet, VGG16, ResNet50, and EfficientNetB1. Validation accuracy was 66.83%, then 71.71% after augmentation. EfficientNetB1 had the best test accuracy, about 87%. This page runs the 4-layer network on real tiles from that dataset. Tumor is called malignant. The other classes are called benign. This is not a diagnosis.</p>
+  <div id="samples"></div>
+  <h2 id="call">Click an image</h2>
+  <p id="detail"></p>
+  <ul id="scores"></ul>
+  <script src="engine.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
