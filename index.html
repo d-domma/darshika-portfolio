@@ -25,18 +25,18 @@
   <main id="top">
     <section class="hero">
       <div class="hero-copy">
-        <p class="kicker">Portfolio · seven builds</p>
+        <p class="kicker">Portfolio · six builds</p>
         <h1>Code, devices, and tools that have to work outside a demo.</h1>
-        <p class="lede">I’m Darshika. I build infrastructure software, medical hardware, safety tools, and models — then put the ones that are ready in front of people.</p>
+        <img class="face" src="darshika-face.jpg" alt="Darshika Domma">
+        <p class="lede">I'm Darshika, a student developer who enjoys turning ideas into things that work beyond a screen. I build across software, AI, and electronics, from personal safety tools to intelligent systems that interact with the physical world. I'm especially interested in how individual components come together to solve problems that matter to people.</p>
       </div>
       <ol class="contents">
-        <li><a href="#infra"><span>01</span> Eco Infra Studio</a></li>
-        <li><a href="#aed"><span>02</span> Automatic AED</a></li>
-        <li><a href="#defense"><span>03</span> Women’s Defense</a></li>
-        <li><a href="#finance"><span>04</span> Finance Tracker</a></li>
-        <li><a href="#colon"><span>05</span> Colon Cancer CNN</a></li>
-        <li><a href="#voc"><span>06</span> VOC Detection</a></li>
-        <li><a href="#lockap"><span>07</span> LockAP</a></li>
+        <li><a href="#infra"><span>01</span> Environmental Optimization AI</a></li>
+        <li><a href="#defense"><span>02</span> Women’s Defense</a></li>
+        <li><a href="#finance"><span>03</span> Finance Tracker</a></li>
+        <li><a href="#colon"><span>04</span> Colon Cancer CNN</a></li>
+        <li><a href="#voc"><span>05</span> VOC Detection</a></li>
+        <li><a href="#lockap"><span>06</span> LockAP</a></li>
       </ol>
     </section>
 
@@ -59,7 +59,7 @@
           <p class="domain">Place</p>
         </div>
         <div class="case-body">
-          <h3>Eco Infra Studio</h3>
+          <h3>Environmental Optimization AI</h3>
           <p class="summary">A design studio that takes a site and a set of preferences, checks them against open environmental data and building-code rules, and generates an editable building.</p>
           <ul>
             <li>Wizard for lot, building type, roof, materials, and sustainability choices.</li>
@@ -70,48 +70,11 @@
           <p class="stack"><span>Angular</span><span>FastAPI</span><span>Blender</span><span>Python</span></p>
           <p><a href="https://github.com/d-domma/eco-infra-studio">GitHub</a></p>
         </div>
-        <figure class="mark-fig" aria-hidden="true">
-          <svg viewBox="0 0 160 160" fill="none">
-            <rect x="18" y="78" width="36" height="58" stroke="currentColor" stroke-width="1.5"/>
-            <rect x="62" y="46" width="44" height="90" stroke="currentColor" stroke-width="1.5"/>
-            <rect x="114" y="64" width="28" height="72" stroke="currentColor" stroke-width="1.5"/>
-            <path d="M18 78 L36 58 L54 78" stroke="currentColor" stroke-width="1.5"/>
-            <path d="M62 46 L84 22 L106 46" stroke="currentColor" stroke-width="1.5"/>
-            <path d="M8 136 H152" stroke="currentColor" stroke-width="1.5"/>
-            <circle cx="28" cy="28" r="8" stroke="currentColor" stroke-width="1.5"/>
-          </svg>
-          <figcaption>Massing, climate, code</figcaption>
-        </figure>
-      </article>
-
-      <article class="case" id="aed" data-domain="health">
-        <div class="case-meta">
-          <p class="num">02</p>
-          <p class="domain">Health</p>
-        </div>
-        <div class="case-body">
-          <h3>Automatic AED</h3>
-          <p class="summary">An automatic external defibrillator as a physical device, with the code that runs detection and the shock sequence.</p>
-          <ul>
-            <li>Hardware build paired with the control software, so the unit is not a diagram on a slide.</li>
-            <li>The program watches the signal, decides whether a shock is indicated, and steps through the response.</li>
-            <li>Built for a moment when a person nearby has to act quickly and the device has to be unambiguous.</li>
-          </ul>
-          <p class="stack"><span>Device</span><span>Embedded code</span></p>
-        </div>
-        <figure class="mark-fig" aria-hidden="true">
-          <svg viewBox="0 0 160 160" fill="none">
-            <path d="M12 84 H42 L52 84 L62 48 L74 120 L86 64 L96 84 H148" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
-            <rect x="48" y="28" width="64" height="28" stroke="currentColor" stroke-width="1.5"/>
-            <path d="M72 36 H88 M80 28 V44" stroke="currentColor" stroke-width="1.5"/>
-          </svg>
-          <figcaption>Sense, decide, shock</figcaption>
-        </figure>
       </article>
 
       <article class="case" id="defense" data-domain="safety">
         <div class="case-meta">
-          <p class="num">03</p>
+          <p class="num">02</p>
           <p class="domain">Safety</p>
         </div>
         <div class="case-body">
@@ -126,22 +89,11 @@
           <p class="stack"><span>Mobile</span><span>Maps</span><span>911</span><span>Messaging</span></p>
           <p><a href="https://github.com/d-domma/womens-defense">GitHub</a></p>
         </div>
-        <figure class="mark-fig" aria-hidden="true">
-          <svg viewBox="0 0 160 160" fill="none">
-            <path d="M24 120 C40 90 48 70 70 62 C96 52 110 40 136 28" stroke="currentColor" stroke-width="1.5"/>
-            <circle cx="24" cy="120" r="5" fill="currentColor"/>
-            <circle cx="136" cy="28" r="5" stroke="currentColor" stroke-width="1.5"/>
-            <circle cx="78" cy="96" r="7" stroke="currentColor" stroke-width="1.5"/>
-            <circle cx="104" cy="78" r="7" stroke="currentColor" stroke-width="1.5"/>
-            <path d="M70 62 L92 88" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3 4"/>
-          </svg>
-          <figcaption>Call, text, route</figcaption>
-        </figure>
       </article>
 
       <article class="case" id="finance" data-domain="money">
         <div class="case-meta">
-          <p class="num">04</p>
+          <p class="num">03</p>
           <p class="domain">Money</p>
         </div>
         <div class="case-body">
@@ -156,19 +108,11 @@
           <p class="stack"><span>Angular</span><span>TypeScript</span><span>Chat</span></p>
           <p><a href="https://github.com/d-domma/finance-tracker">GitHub</a></p>
         </div>
-        <figure class="mark-fig" aria-hidden="true">
-          <svg viewBox="0 0 160 160" fill="none">
-            <path d="M20 40 H140 M20 64 H140 M20 88 H140 M20 112 H140" stroke="currentColor" stroke-width="1.5"/>
-            <path d="M36 124 L58 96 L80 108 L108 68 L132 52" stroke="currentColor" stroke-width="1.5"/>
-            <circle cx="132" cy="52" r="4" fill="currentColor"/>
-          </svg>
-          <figcaption>Ledger and market</figcaption>
-        </figure>
       </article>
 
       <article class="case" id="colon" data-domain="health">
         <div class="case-meta">
-          <p class="num">05</p>
+          <p class="num">04</p>
           <p class="domain">Health</p>
         </div>
         <div class="case-body">
@@ -182,24 +126,11 @@
           <p class="stack"><span>Python</span><span>CNN</span><span>Images</span></p>
           <p><a href="https://github.com/d-domma/colon-cancer-cnn">GitHub</a></p>
         </div>
-        <figure class="mark-fig" aria-hidden="true">
-          <svg viewBox="0 0 160 160" fill="none">
-            <rect x="22" y="28" width="52" height="52" stroke="currentColor" stroke-width="1.5"/>
-            <rect x="30" y="36" width="14" height="14" stroke="currentColor" stroke-width="1.5"/>
-            <rect x="48" y="36" width="14" height="14" stroke="currentColor" stroke-width="1.5"/>
-            <rect x="30" y="54" width="14" height="14" stroke="currentColor" stroke-width="1.5"/>
-            <rect x="48" y="54" width="14" height="14" fill="currentColor"/>
-            <rect x="86" y="48" width="28" height="28" stroke="currentColor" stroke-width="1.5"/>
-            <rect x="122" y="56" width="16" height="16" stroke="currentColor" stroke-width="1.5"/>
-            <path d="M74 54 H86 M114 62 H122" stroke="currentColor" stroke-width="1.5"/>
-          </svg>
-          <figcaption>Image to prediction</figcaption>
-        </figure>
       </article>
 
       <article class="case" id="voc" data-domain="health">
         <div class="case-meta">
-          <p class="num">06</p>
+          <p class="num">05</p>
           <p class="domain">Health</p>
         </div>
         <div class="case-body">
@@ -217,7 +148,7 @@
 
       <article class="case" id="lockap" data-domain="study">
         <div class="case-meta">
-          <p class="num">07</p>
+          <p class="num">06</p>
           <p class="domain">Study</p>
         </div>
         <div class="case-body">
@@ -227,17 +158,6 @@
       </article>
 
       <p class="empty" hidden>Nothing in this group. Choose All to see every project.</p>
-    </section>
-
-    <section id="about" class="about">
-      <div class="about-copy">
-        <p class="kicker">About</p>
-        <h2>High school, and already shipping.</h2>
-        <p>I like projects that mix a real constraint with the code: a lot line, a sensor, a person who needs help, a balance that has to add up. The stack I reach for most is Python, JavaScript, HTML and CSS, React, Angular, and machine learning.</p>
-      </div>
-      <figure class="portrait">
-        <img src="darshika.jpg" alt="Darshika Domma" width="640" height="800">
-      </figure>
     </section>
   </main>
 

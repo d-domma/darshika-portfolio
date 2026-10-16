@@ -127,6 +127,17 @@ h1 {
   font-size: 1.15rem;
 }
 
+.face {
+  width: 148px;
+  height: 148px;
+  margin: 0 0 1rem;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  box-shadow: 0 10px 28px rgba(40, 24, 16, 0.14);
+}
+
 .contents {
   list-style: none;
   margin: 0;
@@ -199,7 +210,7 @@ h1 {
 
 .case {
   display: grid;
-  grid-template-columns: 5.5rem 1fr 9.5rem;
+  grid-template-columns: 5.5rem 1fr;
   gap: 1.5rem;
   padding: 2.4rem 0;
   border-top: 1px solid var(--line);
@@ -291,28 +302,6 @@ h1 {
   color: var(--muted);
 }
 
-.about {
-  display: grid;
-  grid-template-columns: 1.3fr 0.7fr;
-  gap: 3rem;
-  align-items: end;
-  max-width: var(--max);
-  margin: 0 auto;
-  padding: 1rem 6vw 5rem;
-  border-top: 1px solid var(--line);
-}
-
-.about h2 {
-  margin: 0 0 0.8rem;
-  font-size: clamp(2rem, 4vw, 3.2rem);
-  line-height: 1.05;
-}
-
-.about p {
-  max-width: 38rem;
-  color: var(--muted);
-}
-
 .portrait {
   margin: 0;
 }
@@ -349,7 +338,6 @@ code {
 
 @media (max-width: 800px) {
   .hero,
-  .about,
   .case {
     grid-template-columns: 1fr;
   }
